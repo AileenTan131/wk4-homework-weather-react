@@ -1,0 +1,16 @@
+.footer-links:hover {
+  color: white;
+  text-shadow: 2px 2px 2px var(--dark-blue-font);
+  font-weight: 600;
+}
+.footer-links {
+  color: rgb(212, 238, 251);
+  font-family: var(--primary-font);
+}
+.footer {
+  color: rgb(212, 238, 251);
+  font-family: "Poiret One", cursive;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 9px;
+}

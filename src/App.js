@@ -1,21 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
+// import background from "../images/hills.jpg";
+import Searchbar from "./Searchbar";
+import CountryDateTime from "./CountryDateTime";
+import IconTempHumidWind from "./IconTempHumidWind";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Weather App</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="container"
+      // style={{ backgroundImage: `url(${background})` }}
+    >
+      <Searchbar />
+      <br />
+      <CountryDateTime />
+      <IconTempHumidWind />
+      <div className="row week-forecast"></div>
+      <Footer />
     </div>
   );
 }

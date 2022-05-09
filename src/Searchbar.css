@@ -1,0 +1,25 @@
+.submit-button:hover,
+button:hover {
+  border: 1px solid orange;
+  color: orange;
+}
+.city-search,
+.submit-button,
+button {
+  border-radius: 10px;
+  border: 1px solid var(--blue-font);
+  font-family: "Kaushan Script", cursive;
+  padding: 5px 10px 5px 5px;
+}
+button {
+  background-color: transparent;
+}
+.city-search {
+  width: 500px;
+}
+.submit-button {
+  background-color: white;
+}
+.top {
+  text-align: center;
+}
