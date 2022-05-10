@@ -5,7 +5,7 @@ import CountryDateTime from "./CountryDateTime";
 import IconTempHumidWind from "./IconTempHumidWind";
 import Footer from "./Footer";
 
-function App() {
+export default function App() {
   return (
     <div
       className="container"
@@ -20,5 +20,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
