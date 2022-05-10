@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:wght@500;600;700&family=Poiret+One&display=swap"rel="stylesheet");
+
 :root {
   --dark-blue-font: rgb(39, 61, 84);
   --blue-font: rgb(42, 98, 150);
@@ -5,7 +7,7 @@
 }
 
 .container {
-  margin: 50px auto;
+  margin: 50px 0px;
   padding: 60px 90px 40px 90px;
   max-width: 1000px;
   border: 3px solid var(--blue-font);
