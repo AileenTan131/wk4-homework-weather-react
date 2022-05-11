@@ -10,7 +10,7 @@ export default function Searchbar() {
         className="city-search"
       />
       <input type="submit" className="submit-button" />
-      <button>Current</button>
+      <button className="submit-button">Current</button>
     </form>
   );
 }
