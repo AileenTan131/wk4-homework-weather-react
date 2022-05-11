@@ -4,7 +4,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <div className="footer">
-      Coded by
+      Coded by{" "}
       <a
         className="footer-links"
         href="https://www.linkedin.com/in/aileen-tan-878157b5/"
@@ -21,7 +21,7 @@ export default function Footer() {
         href="https://github.com/Minim131/my-weather-app"
       >
         open-sourced on GitHub
-      </a>
+      </a>{" "}
       and hosted on Netlify
     </div>
   );
