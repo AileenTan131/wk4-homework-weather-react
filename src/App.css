@@ -9,7 +9,7 @@
 .container {
   margin: 50px 0px;
   padding: 60px 90px 40px 90px;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   border: 3px solid var(--blue-font);
   background-image: url("./images/hills.jpg");
   background-size: cover;
