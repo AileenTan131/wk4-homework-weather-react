@@ -1,7 +1,7 @@
 import React from "react";
 import "./CountryDateTime.css";
 
-export default function CountryDateTime() {
+export default function CountryDateTime(props) {
   let weatherData = {
     country: "Singapore",
     date: "Tuesday, 18 January",

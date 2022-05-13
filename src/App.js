@@ -1,8 +1,6 @@
 import "./App.css";
 // import background from "../images/hills.jpg";
-import Searchbar from "./Searchbar";
-import CountryDateTime from "./CountryDateTime";
-import IconTempHumidWind from "./IconTempHumidWind";
+import SearchbarForecast from "./SearchbarForecast";
 import Footer from "./Footer";
 
 export default function App() {
@@ -11,10 +9,7 @@ export default function App() {
       className="container"
       // style={{ backgroundImage: `url(${background})` }}
     >
-      <Searchbar />
-      <br />
-      <CountryDateTime />
-      <IconTempHumidWind />
+      <SearchbarForecast />
       <div className="row week-forecast"></div>
       <Footer />
     </div>

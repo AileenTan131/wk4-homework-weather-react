@@ -1,13 +1,7 @@
 import React from "react";
 import "./IconTempHumidWind.css";
 
-export default function IconTempHumidWind() {
-  let weatherData = {
-    temperature: "28",
-    humidity: "10",
-    wind: "15",
-  };
-
+export default function IconTempHumidWind(props) {
   return (
     <div className="row align-items-center day-forecast">
       <div className="col-6 icon">
@@ -18,13 +12,17 @@ export default function IconTempHumidWind() {
         />
       </div>
       <div className="col-6 day-forecast-text">
-        <span className="temperature">{weatherData.temperature}</span>
+        <span className="temperature">
+          {Math.round(props.forecastData.temperature)}
+        </span>
         <span className="temperature-type active celcius">°C</span>
-        <p className="forecast"></p>
+        <p className="forecast">
+          <div>{props.forecastData.description}</div>
+        </p>
         <p className="extra-info">
-          Humidity: <span>{weatherData.humidity}</span>%
+          Humidity: <span>{props.forecastData.humidity}</span>%
           <br />
-          Wind: <span>{weatherData.wind}</span>m/h
+          Wind: <span>{Math.round(props.forecastData.wind)}</span>m/h
         </p>
       </div>
     </div>
