@@ -8,7 +8,7 @@ export default function IconTempHumidWind(props) {
         <img
           src="http://openweathermap.org/img/wn/01d@2x.png"
           className="main-weather-icon"
-          alt=""
+          alt={props.forecastData.description}
         />
       </div>
       <div className="col-6 day-forecast-text">

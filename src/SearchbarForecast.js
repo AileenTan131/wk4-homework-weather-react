@@ -14,6 +14,7 @@ export default function Searchbar() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
+      iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
     });
     setReady(true);
   }
