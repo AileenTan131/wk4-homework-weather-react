@@ -5,11 +5,11 @@ import CountryDateTime from "./CountryDateTime";
 import IconTempHumidWind from "./IconTempHumidWind";
 
 export default function Searchbar() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response);
     setWeatherData({
+      ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -19,10 +19,9 @@ export default function Searchbar() {
       date: "Tuesday, 18 January",
       time: "8.35pm",
     });
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Searchbar">
         <form className="top">
