@@ -6,7 +6,7 @@ import Footer from "./Footer";
 export default function App() {
   return (
     <div
-      className="container"
+      className="container-fluid"
       // style={{ backgroundImage: `url(${background})` }}
     >
       <SearchbarForecast />
