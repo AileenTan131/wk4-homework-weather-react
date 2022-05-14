@@ -15,6 +15,9 @@ export default function Searchbar() {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
+      country: "Singapore",
+      date: "Tuesday, 18 January",
+      time: "8.35pm",
     });
     setReady(true);
   }
