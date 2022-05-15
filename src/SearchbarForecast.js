@@ -16,7 +16,7 @@ export default function Searchbar() {
       description: response.data.weather[0].description,
       iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
       country: "Singapore",
-      date: "Tuesday, 18 January",
+      date: new Date(response.data.dt * 1000),
       time: "8.35pm",
     });
   }
@@ -40,7 +40,7 @@ export default function Searchbar() {
       </div>
     );
   } else {
-    let apiKey = `4c7756cb000c7f0ee92c930c2b6efd59`;
+    let apiKey = `87675437846ea8c4242459c1be7a1969`;
     let city = "london";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
