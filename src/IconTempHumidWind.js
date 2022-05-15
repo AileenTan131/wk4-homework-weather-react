@@ -15,7 +15,7 @@ export default function IconTempHumidWind(props) {
         <span className="temperature">
           {Math.round(props.forecastData.temperature)}
         </span>
-        <span className="temperature-type active celcius">°C</span>
+        <span className="temperature-type active celcius"> °C</span>
         <p className="forecast">
           <div>{props.forecastData.description}</div>
         </p>
