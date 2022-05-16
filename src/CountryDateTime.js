@@ -1,6 +1,7 @@
 import React from "react";
 import "./CountryDateTime.css";
 import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 
 export default function CountryDateTime(props) {
   return (
@@ -11,7 +12,9 @@ export default function CountryDateTime(props) {
           <FormattedDate date={props.forecastData.date} />
           {/* created a new function to tap on the solely the date props in a new page */}
         </div>
-        <div>{props.forecastData.time}</div>
+        <div>
+          <FormattedTime time={props.forecastData.date} />
+        </div>
       </div>
     </div>
   );

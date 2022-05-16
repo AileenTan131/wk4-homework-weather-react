@@ -5,6 +5,7 @@ import CountryDateTime from "./CountryDateTime";
 import IconTempHumidWind from "./IconTempHumidWind";
 
 export default function Searchbar() {
+  const [city, setCity] = useState("australia");
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response);
@@ -15,20 +16,37 @@ export default function Searchbar() {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
-      country: "Singapore",
+      country: city,
       date: new Date(response.data.dt * 1000),
-      time: "8.35pm",
     });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function updateCity(event) {
+    // event.preventDefault();
+    setCity(event.target.value);
+  }
+
+  function search() {
+    let apiKey = `87675437846ea8c4242459c1be7a1969`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherData.ready) {
     return (
       <div className="Searchbar">
-        <form className="top">
+        <form className="top" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder=" Enter a city here!"
             className="city-search"
+            autoFocus="on"
+            onChange={updateCity}
           />
           <input type="submit" className="submit-button" />
           <button className="submit-button">Current</button>
@@ -40,11 +58,7 @@ export default function Searchbar() {
       </div>
     );
   } else {
-    let apiKey = `87675437846ea8c4242459c1be7a1969`;
-    let city = "london";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "loading...";
   }
 }

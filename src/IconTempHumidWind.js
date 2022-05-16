@@ -16,9 +16,7 @@ export default function IconTempHumidWind(props) {
           {Math.round(props.forecastData.temperature)}
         </span>
         <span className="temperature-type active celcius"> °C</span>
-        <p className="forecast">
-          <div>{props.forecastData.description}</div>
-        </p>
+        <p className="forecast">{props.forecastData.description}</p>
         <p className="extra-info">
           Humidity: <span>{props.forecastData.humidity}</span>%
           <br />
