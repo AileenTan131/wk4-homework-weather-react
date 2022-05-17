@@ -1,15 +1,12 @@
 import React from "react";
 import "./IconTempHumidWind.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function IconTempHumidWind(props) {
   return (
     <div className="row align-items-center day-forecast">
       <div className="col-6 icon">
-        <img
-          src={props.forecastData.iconUrl}
-          className="main-weather-icon"
-          alt={props.forecastData.description}
-        />
+        <WeatherIcon code={props.forecastData.icon} />
       </div>
       <div className="col-6 day-forecast-text">
         <span className="temperature">
