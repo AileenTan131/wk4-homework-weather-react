@@ -15,7 +15,7 @@ export default function Searchbar() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon
+      icon: response.data.weather[0].icon,
       country: city,
       date: new Date(response.data.dt * 1000),
     });

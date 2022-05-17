@@ -37,13 +37,11 @@
   font-family: var(--primary-font);
   color: var(--dark-blue-font);
 }
-.main-weather-icon {
-  width: 160px;
-}
 .icon {
   text-align: right;
-  padding: 0;
+  padding-right: 25px !important;
 }
+
 p {
   margin: 0;
 }
