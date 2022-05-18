@@ -19,7 +19,7 @@ export default function WeatherTemperature(props) {
         <span className="temperature-type active celcius">
           {" "}
           °C |{" "}
-          <a href="" onClick={showFarhenheit}>
+          <a href="/" onClick={showFarhenheit}>
             °F
           </a>
         </span>
@@ -32,7 +32,7 @@ export default function WeatherTemperature(props) {
         <span className="temperature">{Math.round(Farhenheit)}</span>
         <span className="temperature-type active celcius">
           {" "}
-          <a href="" onClick={showCelcius}>
+          <a href="/" onClick={showCelcius}>
             °C
           </a>{" "}
           | °F
