@@ -1,0 +1,14 @@
+.week-forecast {
+  font-size: 17px;
+  font-weight: 900;
+  padding: 20px 0px;
+  text-align: center;
+  font-family: var(--primary-font);
+  color: var(--dark-blue-font);
+  background-color: rgba(39, 61, 84, 0.2);
+  border: 3px solid rgba(255, 255, 255);
+  border-radius: 10px;
+}
+.temp-range {
+  color: white;
+}

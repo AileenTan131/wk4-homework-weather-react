@@ -7,7 +7,11 @@ export default function IconTempHumidWind(props) {
   return (
     <div className="row align-items-center day-forecast">
       <div className="col-6 icon">
-        <WeatherIcon code={props.forecastData.icon} />
+        <WeatherIcon
+          code={props.forecastData.icon}
+          size={90}
+          color="rgb(39, 61, 84)"
+        />
       </div>
       <div className="col-6 day-forecast-text">
         <WeatherTemperature celcius={props.forecastData.temperature} />
