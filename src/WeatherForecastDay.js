@@ -19,7 +19,7 @@ export default function WeatherForecastDay(props) {
         size={50}
         color="white"
       />
-      <div class="temp-range">
+      <div className="temp-range">
         <strong> {Math.round(props.data.temp.min)}°C</strong>/{" "}
         {Math.round(props.data.temp.max)}°C
       </div>

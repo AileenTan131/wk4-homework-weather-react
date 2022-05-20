@@ -14,8 +14,8 @@ export default function WeekForecast(props) {
   }
 
   useEffect(() => {
-    setReady(false);
-  }, [props.coordinates]);
+    setReady(false); //set ready as false
+  }, [props.coordinates]); //condition: if the country coordinates change after submitting new country
 
   function search() {
     // let apiKey = `87675437846ea8c4242459c1be7a1969`;
@@ -31,12 +31,15 @@ export default function WeekForecast(props) {
     return (
       <div className="row week-forecast">
         {forecast.map(function (dailyForecast, index) {
-          if (index < 6)
+          if (index < 6) {
             return (
               <div className="col-2" key={index}>
                 <WeatherForecastDay data={dailyForecast} />
               </div>
             );
+          } else {
+            return null;
+          }
         })}
         {/* <div className="col-2">
           <WeatherForecastDay data={forecast[1]} />
