@@ -34,7 +34,8 @@ export default function Searchbar() {
   }
 
   function search() {
-    let apiKey = `87675437846ea8c4242459c1be7a1969`;
+    // let apiKey = `87675437846ea8c4242459c1be7a1969`;
+    let apiKey = `4c7756cb000c7f0ee92c930c2b6efd59`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
