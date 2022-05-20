@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import WeatherForecastDay from "./WeatherForecastDay";
 
 import "./WeekForecast.css";
@@ -12,6 +12,10 @@ export default function WeekForecast(props) {
     setForecast(response.data.daily);
     setReady(true);
   }
+
+  useEffect(() => {
+    setReady(false);
+  }, [props.coordinates]);
 
   function search() {
     // let apiKey = `87675437846ea8c4242459c1be7a1969`;
