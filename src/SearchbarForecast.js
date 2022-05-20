@@ -3,14 +3,16 @@ import axios from "axios";
 import "./SearchbarForecast.css";
 import CountryDateTime from "./CountryDateTime";
 import IconTempHumidWind from "./IconTempHumidWind";
+import WeekForecast from "./WeekForecast";
 
 export default function Searchbar() {
   const [city, setCity] = useState("australia");
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response);
+    // console.log(response);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -55,6 +57,7 @@ export default function Searchbar() {
         <br />
         <CountryDateTime forecastData={weatherData} />
         <IconTempHumidWind forecastData={weatherData} />
+        <WeekForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
