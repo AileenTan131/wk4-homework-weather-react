@@ -1,14 +1,19 @@
 .submit-button:hover,
-button:hover {
+button:hover,
+.current-button {
   border: 1px solid orange;
   color: orange;
 }
 .city-search,
-.submit-button {
+.submit-button,
+.current-button {
   border-radius: 10px;
   border: 1px solid var(--blue-font);
   font-family: "Kaushan Script", cursive;
   padding: 5px 10px 5px 5px;
+}
+.fa-location-dot {
+  font-size: 15px;
 }
 button {
   background-color: transparent;
@@ -16,7 +21,8 @@ button {
 .city-search {
   width: 500px;
 }
-.submit-button {
+.submit-button,
+.current-button {
   background-color: white;
 }
 .top {

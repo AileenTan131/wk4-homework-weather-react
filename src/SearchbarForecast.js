@@ -66,8 +66,9 @@ export default function Searchbar() {
             onChange={updateCity}
           />
           <input type="submit" className="submit-button" />
-          <button className="submit-button" onClick={currentButton}>
+          <button className="current-button" onClick={currentButton}>
             Current
+            <i class="fa-solid fa-location-dot fa-xln"></i>
           </button>
         </form>
 
