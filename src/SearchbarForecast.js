@@ -5,6 +5,8 @@ import CountryDateTime from "./CountryDateTime";
 import IconTempHumidWind from "./IconTempHumidWind";
 import WeekForecast from "./WeekForecast";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Searchbar() {
   const [city, setCity] = useState("australia");
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,7 +20,7 @@ export default function Searchbar() {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      country: city,
+      country: response.data.name,
       date: new Date(response.data.dt * 1000),
     });
   }
@@ -68,10 +70,10 @@ export default function Searchbar() {
           <input type="submit" className="submit-button" />
           <button className="current-button" onClick={currentButton}>
             Current
-            <i class="fa-solid fa-location-dot fa-xln"></i>
+            <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+            {/* <i className="fa-solid fa-location-dot fa-xln"></i> */}
           </button>
         </form>
-
         <br />
         <CountryDateTime forecastData={weatherData} />
         <IconTempHumidWind forecastData={weatherData} />
