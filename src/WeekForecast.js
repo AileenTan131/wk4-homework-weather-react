@@ -8,7 +8,7 @@ export default function WeekForecast(props) {
   const [ready, setReady] = useState(false);
   const [forecast, setForecast] = useState(null);
   function handleResponse(response) {
-    console.log(response);
+    // console.log(response);
     setForecast(response.data.daily);
     setReady(true);
   }
@@ -27,7 +27,7 @@ export default function WeekForecast(props) {
   }
 
   if (ready) {
-    console.log(forecast);
+    // console.log(forecast);
     return (
       <div className="row week-forecast">
         {forecast.map(function (dailyForecast, index) {

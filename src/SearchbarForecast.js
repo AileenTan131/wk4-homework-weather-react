@@ -9,7 +9,7 @@ export default function Searchbar() {
   const [city, setCity] = useState("australia");
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    // console.log(response);
+    console.log(response);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -40,6 +40,20 @@ export default function Searchbar() {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  //current location
+  function showPosition(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiKey = `4c7756cb000c7f0ee92c930c2b6efd59`;
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiURL).then(handleResponse);
+  }
+
+  function currentButton(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Searchbar">
@@ -52,7 +66,9 @@ export default function Searchbar() {
             onChange={updateCity}
           />
           <input type="submit" className="submit-button" />
-          <button className="submit-button">Current</button>
+          <button className="submit-button" onClick={currentButton}>
+            Current
+          </button>
         </form>
 
         <br />
