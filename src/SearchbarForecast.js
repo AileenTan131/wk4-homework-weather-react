@@ -6,6 +6,7 @@ import IconTempHumidWind from "./IconTempHumidWind";
 import WeekForecast from "./WeekForecast";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Searchbar() {
   const [city, setCity] = useState("australia");
@@ -69,9 +70,7 @@ export default function Searchbar() {
           />
           <input type="submit" className="submit-button" />
           <button className="current-button" onClick={currentButton}>
-            Current
-            <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-            {/* <i className="fa-solid fa-location-dot fa-xln"></i> */}
+            <FontAwesomeIcon icon={faLocationDot} />
           </button>
         </form>
         <br />

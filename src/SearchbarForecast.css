@@ -1,23 +1,37 @@
 .submit-button:hover,
-button:hover,
-.current-button {
+button:hover {
   border: 1px solid orange;
+}
+button:hover,
+.submit-button:hover {
   color: orange;
 }
+
 .city-search,
 .submit-button,
 .current-button {
   border-radius: 10px;
   border: 1px solid var(--blue-font);
   font-family: "Kaushan Script", cursive;
+}
+
+.city-search,
+.submit-button {
   padding: 5px 10px 5px 5px;
 }
-.fa-location-dot {
-  font-size: 15px;
+.current-button {
+  padding: 5px 10px 5px 9px;
 }
+
+.fa-location-dot {
+  font-size: 20px;
+}
+
 button {
+  color: var(--dark-blue-font);
   background-color: transparent;
 }
+
 .city-search {
   width: 500px;
 }
