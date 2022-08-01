@@ -5,20 +5,6 @@
   font-family: var(--primary-font);
   color: var(--dark-blue-font);
 }
-.temperature-type {
-  font-size: 23px;
-  position: relative;
-  top: -45px;
-  left: 5px;
-  text-decoration: none;
-  color: var(--dark-blue-font);
-  cursor: default;
-}
-.temperature {
-  font-size: 88px;
-  line-height: 77px;
-}
-.temperature,
 .forecast {
   font-weight: 600;
   font-style: italic;
