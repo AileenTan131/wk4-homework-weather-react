@@ -9,7 +9,6 @@
 .container-fluid {
   margin: 50px auto;
   padding: 60px 0px 40px 0px;
-  /* max-width: 1000px; */
   border: 3px solid var(--blue-font);
   background-image: url("./images/hills.jpg");
   background-size: cover;
