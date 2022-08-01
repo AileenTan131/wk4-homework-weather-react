@@ -13,3 +13,14 @@
   font-weight: 600;
   font-style: italic;
 }
+@media (max-width: 400px) {
+  .temperature {
+    font-size: 70px;
+  }
+  .temperature-type {
+    font-size: 18px;
+    position: relative;
+    top: -35px;
+    left: 10px;
+  }
+}

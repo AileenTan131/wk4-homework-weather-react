@@ -8,8 +8,6 @@
 .forecast {
   font-weight: 600;
   font-style: italic;
-}
-.forecast {
   line-height: 46px;
   font-size: 29px;
   text-transform: capitalize;
@@ -30,4 +28,11 @@
 
 p {
   margin: 0;
+}
+
+@media (max-width: 400px) {
+  .forecast {
+    font-size: 19px;
+    line-height: 20px;
+  }
 }
