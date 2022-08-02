@@ -19,8 +19,13 @@
   font-size: 19px;
   line-height: 25px;
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .country {
     font-size: 35px;
+  }
+}
+@media (max-width: 280px) {
+  .country {
+    font-size: 30px;
   }
 }

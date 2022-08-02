@@ -30,7 +30,7 @@ p {
   margin: 0;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .forecast {
     font-size: 19px;
     line-height: 20px;

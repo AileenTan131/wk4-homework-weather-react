@@ -2,7 +2,7 @@
   font-size: 23px;
   position: relative;
   top: -45px;
-  left: 5px;
+  left: 15px;
   text-decoration: none;
   color: var(--dark-blue-font);
   cursor: default;
@@ -13,14 +13,25 @@
   font-weight: 600;
   font-style: italic;
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .temperature {
-    font-size: 70px;
+    font-size: 60px;
   }
   .temperature-type {
     font-size: 18px;
     position: relative;
-    top: -35px;
+    top: -32px;
+    left: 10px;
+  }
+}
+@media (max-width: 280px) {
+  .temperature {
+    font-size: 43px;
+  }
+  .temperature-type {
+    font-size: 12px;
+    position: relative;
+    top: -20px;
     left: 10px;
   }
 }
