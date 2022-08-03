@@ -6,13 +6,18 @@
   .temp-range {
     font-size: 14px;
   }
+  .week-forecast {
+    padding-right: 17px !important;
+  }
+  .WeatherForecastDay canvas {
+    width: 38px;
+  }
 }
 @media (max-width: 280px) {
   .temp-range {
     font-size: 12px;
   }
-  .weatherIcon,
-  .weather-icon {
-    width: 10px;
+  .WeatherForecastDay canvas {
+    width: 33px;
   }
 }

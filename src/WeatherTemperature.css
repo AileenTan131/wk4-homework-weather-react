@@ -24,7 +24,18 @@
     left: 10px;
   }
 }
-@media (max-width: 280px) {
+@media (max-width: 360px) {
+  .temperature {
+    font-size: 51px;
+  }
+  .temperature-type {
+    font-size: 13px;
+    position: relative;
+    top: -27px;
+    left: 8px;
+  }
+}
+@media (max-width: 300px) {
   .temperature {
     font-size: 43px;
   }
